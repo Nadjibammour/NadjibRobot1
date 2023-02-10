@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.1 (Python 3.10.7 on win32)" generated="20230210 12:29:49.953" rpa="false" schemaversion="3">
+<suite id="s1" name="Test02" source="c:\Users\dell\Desktop\Robot_Project3\TestCases\Test02.robot">
+<test id="s1-t1" name="Reserver une demo gratuite" line="18">
+<kw name="Ouvrir site dans le le navigateur" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230210 12:29:50.437" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
+<status status="PASS" starttime="20230210 12:29:50.436" endtime="20230210 12:30:01.551"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230210 12:30:01.552" endtime="20230210 12:30:01.684"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230210 12:30:03.698" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230210 12:30:01.684" endtime="20230210 12:30:03.699"/>
+</kw>
+<status status="PASS" starttime="20230210 12:29:50.434" endtime="20230210 12:30:03.701"/>
+</kw>
+<kw name="Cliquer sur le lien orangeHRM.com">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>css:a[href='http://www.orangehrm.com']</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230210 12:30:03.707" level="INFO">Clicking link 'css:a[href='http://www.orangehrm.com']'.</msg>
+<status status="PASS" starttime="20230210 12:30:03.704" endtime="20230210 12:30:03.867"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230210 12:30:05.889" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230210 12:30:03.868" endtime="20230210 12:30:05.889"/>
+</kw>
+<status status="PASS" starttime="20230210 12:30:03.703" endtime="20230210 12:30:05.892"/>
+</kw>
+<kw name="Switcher vers une autre fenetre">
+<kw name="Get Window Handles" library="SeleniumLibrary">
+<var>@{ListWindows}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<msg timestamp="20230210 12:30:06.049" level="INFO">@{ListWindows} = [ CDwindow-F69A294FD1F374B4FA7BDFEB84A0FB03 | CDwindow-2D81DB0F1F85BA993AB11B3AA9FE1C57 ]</msg>
+<status status="PASS" starttime="20230210 12:30:05.895" endtime="20230210 12:30:06.049"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>@{ListWindows}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230210 12:30:06.050" endtime="20230210 12:30:06.053"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>${ListWindows}[1]</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20230210 12:30:06.053" endtime="20230210 12:30:06.196"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230210 12:30:08.206" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230210 12:30:06.197" endtime="20230210 12:30:08.207"/>
+</kw>
+<status status="PASS" starttime="20230210 12:30:05.893" endtime="20230210 12:30:08.210"/>
+</kw>
+<kw name="Reserver sur une demo gratuite">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//*[@id='navbarSupportedContent']/div[2]/ul/li[1]/a/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230210 12:30:08.212" level="INFO">Clicking button '//*[@id='navbarSupportedContent']/div[2]/ul/li[1]/a/button'.</msg>
+<status status="PASS" starttime="20230210 12:30:08.212" endtime="20230210 12:30:17.083"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230210 12:30:19.093" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230210 12:30:17.084" endtime="20230210 12:30:19.093"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@id='Form_getForm_FullName']</arg>
+<arg>farid</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230210 12:30:19.095" level="INFO">Typing text 'farid' into text field '//input[@id='Form_getForm_FullName']'.</msg>
+<status status="PASS" starttime="20230210 12:30:19.093" endtime="20230210 12:30:19.261"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:Email</arg>
+<arg>farid@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230210 12:30:19.262" level="INFO">Typing text 'farid@gmail.com' into text field 'name:Email'.</msg>
+<status status="PASS" starttime="20230210 12:30:19.261" endtime="20230210 12:30:19.445"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css:#Form_getForm_Contact</arg>
+<arg>514432223</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230210 12:30:19.446" level="INFO">Typing text '514432223' into text field 'css:#Form_getForm_Contact'.</msg>
+<status status="PASS" starttime="20230210 12:30:19.445" endtime="20230210 12:30:19.629"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:Form_getForm_action_submitForm</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230210 12:30:19.632" level="INFO">Clicking element 'id:Form_getForm_action_submitForm'.</msg>
+<status status="PASS" starttime="20230210 12:30:19.631" endtime="20230210 12:30:19.816"/>
+</kw>
+<status status="PASS" starttime="20230210 12:30:08.212" endtime="20230210 12:30:19.817"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230210 12:30:19.962" endtime="20230210 12:30:22.730"/>
+</kw>
+<status status="PASS" starttime="20230210 12:29:50.433" endtime="20230210 12:30:22.731"/>
+</test>
+<doc>Ce cas de test permet de reserver une demo gratuite sur le site OranDemo.
+(handle window, switch to window)</doc>
+<status status="PASS" starttime="20230210 12:29:49.963" endtime="20230210 12:30:22.733"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Test02">Test02</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
